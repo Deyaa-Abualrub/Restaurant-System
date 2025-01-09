@@ -6,7 +6,7 @@ document
     let fullName = document.getElementById("fullName").value;
     let password = document.getElementById("password").value;
     let dob = document.getElementById("dob").value;
-    let gender = document.querySelector('input[name="gender"]').value;
+    let gender = document.querySelector('input[name="gender"]:checked').value;
     let phone = document.getElementById("phone").value;
 
     let checkBox = document.querySelectorAll('input[name="orderType"]:checked');
@@ -16,7 +16,7 @@ document
       ch.push(checkBox[i].value);
     }
 
-    let orderOption = document.querySelector('input[name="orderOption"]').value;
+    let orderOption = document.querySelector('input[name="orderOption"]:checked').value;
 
     let Customer = new C1(
       fullName,
@@ -49,7 +49,7 @@ function renderCustomer(customer) {
   const container = document.getElementById("cardsContainer");
 
   const card = document.createElement("div");
-  card.class = "card";
+  card.className = "card";
 
   card.innerHTML = `
     <h3>${customer.fullName}</h3>
